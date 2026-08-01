@@ -8,7 +8,7 @@ import { FaGraduationCap, FaTrophy, FaCode } from 'react-icons/fa';
 
 // TODO: replace with your actual uploaded images from src/assets/images/journey/
 import collegePic1 from '../../assets/images/journey/college1.jpeg';
-import collegePic2 from '../../assets/images/journey/college2.jpg';
+import collegePic2 from '../../assets/images/journey/college2.JPG';
 import sihWin from '../../assets/images/journey/sih-trophy.jpeg';
 // import hackathonMoment from '../../assets/images/journey/hackathon.jpg';
 // import teamMoment from '../../assets/images/journey/team.jpg';
