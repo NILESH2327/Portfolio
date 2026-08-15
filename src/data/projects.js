@@ -102,7 +102,7 @@ export const projects = [
     ],
     links: {
       github: "https://github.com/NILESH2327/Talkie",
-      live: "#" 
+      live: "https://talkie-two-amber.vercel.app" 
     }
   }
 ];
