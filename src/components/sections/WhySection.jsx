@@ -12,10 +12,9 @@ import {
   Code2,
   Briefcase,
   MapPin,
+  Trophy,
 } from 'lucide-react';
 
-// A cursor-reactive tilt card with a spotlight that follows the mouse —
-// the "signature" hover moment for this section.
 function TiltCertCard({ cert, index }) {
   const ref = useRef(null);
 
@@ -87,19 +86,22 @@ function TiltCertCard({ cert, index }) {
 
 export function WhySection() {
   const fastFacts = [
-    { label: 'Current Status', value: 'B.Tech IT Student', icon: UserCheck },
-    { label: 'Degree', value: 'B.Tech — Information Technology', icon: BookMarked },
-    { label: 'Graduation', value: '2027', icon: CalendarCheck2 },
-    { label: 'Core Stack', value: 'React, Node.js, MongoDB, Next.js, Gemini AI', icon: Code2 },
-    { label: 'Open To', value: 'Internships, Full-Stack Roles, AI/ML-Integrated Roles', icon: Briefcase },
-    { label: 'Location', value: 'Jhansi, Uttar Pradesh, India', icon: MapPin },
+    { label: 'Current Status', value: 'B.Tech IT Student (BIET Jhansi)', icon: UserCheck },
+    { label: 'Degree & Performance', value: 'B.Tech IT · 8.46 / 10 CGPA', icon: BookMarked },
+    { label: 'Graduation Timeline', value: '2023 – 2027', icon: CalendarCheck2 },
+    { label: 'Core Tech Stack', value: 'Next.js, React, Node.js, MongoDB, GenAI & RAG', icon: Code2 },
+    { label: 'DSA & Contest Benchmark', value: 'LeetCode Knight (1889 Rating · Top 4.7%)', icon: Trophy },
+    { label: 'Hackathon Benchmark', value: 'SIH 2025 Winner (1st / 10,000+ Teams)', icon: Award },
+    { label: 'Open To Opportunities', value: 'Full-Stack Roles, AI Engineering, Internships', icon: Briefcase },
+    { label: 'Base Location', value: 'Jhansi, Uttar Pradesh, India', icon: MapPin },
   ];
 
   const highlights = [
-    'Strong MERN + Next.js full-stack foundation with generative AI integration experience.',
-    'Built production AI features using Gemini API across 4 different applications.',
-    'National Hackathon winner (SIH 2025) among 10000+ students.',
-    '827+ DSA problems solved, LeetCode Knight rank, top 7% globally.',
+    'Smart India Hackathon 2025 National Winner: Ranked 1st among 10,000+ teams nationwide for architecting Krishi Sakhi.',
+    'LeetCode Knight (Rating: 1889, Top 4.7% Globally) with 900+ Data Structures & Algorithms problems solved.',
+    'Competitive Programming: Peak 1603 rating on CodeChef with 50+ live contests across LeetCode, CodeChef, and Codeforces.',
+    'Full-Stack + GenAI: Shipped 5+ production-ready systems integrating Next.js, MERN, RAG pipelines, and LLM APIs.',
+    'Finalist / Selected: INSOMNIA\'26 (IIT Roorkee), Amazon ML School 2025–26, Adobe India Hackathon, Qualified JEE Main & Adv 2023.',
   ];
 
   const certifications = [
@@ -142,14 +144,14 @@ export function WhySection() {
             <SectionHeading
               label="WHY CHOOSE ME"
               heading="Why Nilesh."
-              description="A quick breakdown of my credentials, capabilities, and professional focus."
+              description="A quick breakdown of my credentials, capabilities, and professional focus based on verified achievements."
             />
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mt-12">
             {/* Column 1: Fast Facts Card */}
             <motion.div variants={itemVariants} className="lg:col-span-5 h-full">
-              <Card className="bg-accent-yellow border-2 border-slate-950 text-slate-950 p-8 h-full flex flex-col shadow-[4px_4px_0px_rgba(15,23,42,1)]">
+              <Card className="bg-accent-yellow border-2 border-slate-950 text-slate-950 p-6 sm:p-8 h-full flex flex-col shadow-[5px_5px_0px_rgba(15,23,42,1)]">
                 <div className="flex items-center gap-2 mb-6">
                   <motion.span
                     animate={{ y: [0, -5, 0] }}
@@ -161,18 +163,18 @@ export function WhySection() {
                   <h3 className="text-xl font-black tracking-tight">Fast Facts</h3>
                 </div>
 
-                <div className="grid grid-cols-1 gap-3">
+                <div className="grid grid-cols-1 gap-2.5">
                   {fastFacts.map((fact, idx) => {
                     const Icon = fact.icon;
                     return (
                       <motion.div
                         key={idx}
-                        whileHover={{ x: 4, y: -3 }}
+                        whileHover={{ x: 4, y: -2 }}
                         transition={{ type: 'spring', stiffness: 300, damping: 18 }}
-                        className="flex items-start gap-3 rounded-xl bg-white/60 border border-slate-950/15 p-3.5 hover:bg-white hover:border-slate-950/40 transition-colors duration-200"
+                        className="flex items-start gap-3 rounded-xl bg-white/70 border border-slate-950/15 p-3 hover:bg-white hover:border-slate-950/40 transition-colors duration-200"
                       >
                         <motion.span
-                          animate={{ y: [0, -4, 0] }}
+                          animate={{ y: [0, -3, 0] }}
                           transition={{
                             duration: 2.2 + idx * 0.25,
                             repeat: Infinity,
@@ -181,13 +183,13 @@ export function WhySection() {
                           }}
                           className="mt-0.5 flex-shrink-0 rounded-lg bg-slate-950 text-accent-yellow p-1.5"
                         >
-                          <Icon className="w-4 h-4" />
+                          <Icon className="w-3.5 h-3.5" />
                         </motion.span>
                         <div className="min-w-0">
-                          <dt className="text-[11px] font-black uppercase tracking-wider text-slate-800/80">
+                          <dt className="text-[10px] font-black uppercase tracking-wider text-slate-800/80">
                             {fact.label}
                           </dt>
-                          <dd className="text-sm font-extrabold text-slate-950 leading-snug break-words">
+                          <dd className="text-xs sm:text-sm font-extrabold text-slate-950 leading-snug break-words">
                             {fact.value}
                           </dd>
                         </div>
@@ -200,11 +202,12 @@ export function WhySection() {
 
             {/* Column 2: Highlights & Certifications Card */}
             <motion.div variants={itemVariants} className="lg:col-span-7 h-full">
-              <Card className="p-8 h-full border-2 border-slate-950 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col justify-between text-left space-y-8 shadow-[4px_4px_0px_rgba(15,23,42,1)] dark:shadow-[4px_4px_0px_rgba(0,0,0,0.4)]">
+              <Card className="p-6 sm:p-8 h-full border-2 border-slate-950 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col justify-between text-left space-y-8 shadow-[5px_5px_0px_rgba(15,23,42,1)] dark:shadow-[5px_5px_0px_rgba(0,0,0,0.4)]">
                 {/* Highlights List */}
                 <div>
-                  <h3 className="text-lg font-black text-slate-950 dark:text-white mb-5 font-display">
-                    Key Highlights
+                  <h3 className="text-lg sm:text-xl font-black text-slate-950 dark:text-white mb-5 font-display flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-accent-yellow" />
+                    Key Highlights & Verified Output
                   </h3>
                   <ul className="space-y-4">
                     {highlights.map((highlight, idx) => (
@@ -216,11 +219,11 @@ export function WhySection() {
                       >
                         <motion.span
                           whileHover={{ rotate: 12, scale: 1.15 }}
-                          className="mt-0.5 flex-shrink-0 rounded-full bg-accent-yellow/20 text-slate-950 dark:text-accent-yellow p-1 border border-slate-950/10 dark:border-accent-yellow/30"
+                          className="mt-0.5 flex-shrink-0 rounded-full bg-amber-400/20 text-slate-950 dark:text-accent-yellow p-1 border border-slate-950/10 dark:border-accent-yellow/30"
                         >
-                          <CheckCircle2 className="w-4 h-4" />
+                          <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                         </motion.span>
-                        <span className="text-sm text-slate-700 dark:text-slate-300 leading-normal font-bold">
+                        <span className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-bold">
                           {highlight}
                         </span>
                       </motion.li>
@@ -230,8 +233,8 @@ export function WhySection() {
 
                 {/* Certifications sub-card */}
                 <div className="pt-6 border-t-2 border-slate-200 dark:border-slate-800">
-                  <h4 className="text-sm font-black text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-wider">
-                    Certifications
+                  <h4 className="text-xs font-black text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-wider">
+                    Certifications & Specializations
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {certifications.map((cert, idx) => (

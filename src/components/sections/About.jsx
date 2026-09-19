@@ -10,8 +10,7 @@ import {
   ChevronLeft, 
   ChevronRight, 
   Sparkles, 
-  ArrowRight,
-  Maximize2
+  ArrowRight
 } from 'lucide-react';
 
 import collegePic1 from '../../assets/images/journey/college1.jpeg';
@@ -113,7 +112,7 @@ export function About() {
             />
           </motion.div>
 
-          {/* Quick Highlight Metrics Strip */}
+          {/* Quick Highlight Metrics Strip (Aligned with Resume) */}
           <motion.div variants={itemVariants} className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-10 -mt-2">
             <div className="p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-slate-900 border-2 border-slate-950 dark:border-slate-800 shadow-[3px_3px_0px_rgba(15,23,42,1)] dark:shadow-[3px_3px_0px_rgba(0,0,0,0.6)] flex items-center gap-3">
               <span className="w-9 h-9 rounded-xl bg-amber-400 text-slate-950 border border-slate-950 flex items-center justify-center flex-shrink-0 font-black text-sm">
@@ -140,8 +139,8 @@ export function About() {
                 ⚔️
               </span>
               <div>
-                <p className="text-base sm:text-lg font-black text-slate-950 dark:text-white leading-tight">Knight</p>
-                <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">LeetCode Top 5%</p>
+                <p className="text-base sm:text-lg font-black text-slate-950 dark:text-white leading-tight">1889 Rating</p>
+                <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">LeetCode Knight (Top 4.7%)</p>
               </div>
             </div>
 
@@ -150,13 +149,13 @@ export function About() {
                 🚀
               </span>
               <div>
-                <p className="text-base sm:text-lg font-black text-slate-950 dark:text-white leading-tight">5+ Apps</p>
-                <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">Full-Stack Deployed</p>
+                <p className="text-base sm:text-lg font-black text-slate-950 dark:text-white leading-tight">900+ DSA</p>
+                <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">Problems Solved</p>
               </div>
             </div>
           </motion.div>
 
-          {/* Main Content Grid: Narrative Bio (Left) + Crazy Interactive Photo Showcase (Right) */}
+          {/* Main Content Grid: Narrative Bio (Left) + Interactive Photo Showcase (Right) */}
           <motion.div variants={itemVariants} className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
 
             {/* LEFT — Narrative Dossier & Minimalist Quote (5 Cols) */}
@@ -169,11 +168,11 @@ export function About() {
                   </span>
                   <div>
                     <span className="text-[10px] font-black uppercase tracking-widest text-amber-600 dark:text-amber-400">Education</span>
-                    <h3 className="text-base font-black text-slate-900 dark:text-white leading-none">BIET Jhansi · IT Undergrad</h3>
+                    <h3 className="text-base font-black text-slate-900 dark:text-white leading-none">BIET Jhansi · IT Undergrad (2023–2027)</h3>
                   </div>
                 </div>
                 <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
-                  Information Technology student (2022–2026), spending most of my time in the space between clean backend architecture and generative AI — REST APIs, optimized database schemas, and AI-integrated product features.
+                  Information Technology undergrad with an 8.46 CGPA, building in the space between clean backend architecture and generative AI — REST APIs, optimized schemas, and practical AI integrations.
                 </p>
               </div>
 
@@ -189,7 +188,7 @@ export function About() {
                   </div>
                 </div>
                 <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
-                  Whether it's a role-based hospital management system (Medixthon), a multi-tenant AI chatbot SaaS, or a voice-enabled farming assistant (Krishi Sakhi) — I prioritize shipping software that real users can intuitively navigate.
+                  From role-based hospital management (Medixthon) to multi-tenant AI chatbot SaaS and voice-enabled rural advisory tools (Krishi Sakhi) — I prioritize shipping software that real users can navigate smoothly.
                 </p>
               </div>
 
@@ -201,15 +200,15 @@ export function About() {
                   </span>
                   <div>
                     <span className="text-[10px] font-black uppercase tracking-widest text-emerald-600 dark:text-emerald-400">SIH 2025 Glory</span>
-                    <h3 className="text-base font-black text-slate-900 dark:text-white leading-none">1st Place Nationwide</h3>
+                    <h3 className="text-base font-black text-slate-900 dark:text-white leading-none">1st Place Nationwide (10k+ Teams)</h3>
                   </div>
                 </div>
                 <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
-                  Led our team to national victory at Smart India Hackathon 2025 among 10,000+ teams across India — a defining milestone that proved the value of fast execution and teamwork.
+                  Ranked 1st nationwide at Smart India Hackathon 2025 for architecting an AI-powered agricultural advisory platform for Kerala farmers — proving the impact of rapid execution under pressure.
                 </p>
               </div>
 
-              {/* REFINED MINIMALIST QUOTE (Replaces the chunky blue block) */}
+              {/* REFINED MINIMALIST QUOTE (Adaptive Light & Dark Mode) */}
               <div className="relative p-5 rounded-2xl bg-white dark:bg-slate-900/80 border-2 border-slate-950 dark:border-slate-800 shadow-[4px_4px_0px_rgba(15,23,42,1)] dark:shadow-[4px_4px_0px_rgba(0,0,0,0.6)] overflow-hidden">
                 <div className="absolute top-0 left-0 bottom-0 w-1.5 bg-accent-yellow" />
                 <div className="flex items-start gap-3 pl-1">
@@ -220,7 +219,7 @@ export function About() {
                     <p className="font-bold text-slate-900 dark:text-slate-100 text-sm sm:text-base leading-snug italic">
                       "I build software from idea to working product — with a focus on AI integration, clean APIs, and real-world usability."
                     </p>
-                    <p className="mt-2 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                    <p className="mt-2 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                       — Nilesh Kumar · Core Philosophy
                     </p>
                   </div>
@@ -228,21 +227,21 @@ export function About() {
               </div>
             </div>
 
-            {/* RIGHT — Crazy Interactive Journey Photo Deck (7 Cols) */}
+            {/* RIGHT — Interactive Photo Deck (Adaptive Light & Dark Mode) */}
             <div className="lg:col-span-7">
               <div 
-                className="relative rounded-3xl border-2 border-slate-950 dark:border-slate-700 bg-slate-950 text-white shadow-[6px_6px_0px_rgba(15,23,42,1)] dark:shadow-[6px_6px_0px_rgba(0,0,0,0.8)] overflow-hidden group"
+                className="relative rounded-3xl border-2 border-slate-950 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white shadow-[6px_6px_0px_rgba(15,23,42,1)] dark:shadow-[6px_6px_0px_rgba(0,0,0,0.8)] overflow-hidden group transition-colors duration-300"
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
               >
                 {/* Top Story Progress Bars (Instagram / Apple Style) */}
-                <div className="p-4 sm:p-5 pb-2 flex items-center justify-between gap-2 border-b border-white/10 relative z-20 bg-slate-950/80 backdrop-blur-md">
+                <div className="p-4 sm:p-5 pb-2.5 flex items-center justify-between gap-2 border-b border-slate-200 dark:border-white/10 relative z-20 bg-slate-50/95 dark:bg-slate-950/80 backdrop-blur-md">
                   <div className="flex items-center gap-2 flex-1">
                     {journeyPhotos.map((photo, i) => (
                       <button
                         key={i}
                         onClick={(e) => { e.stopPropagation(); setIndex(i); }}
-                        className="flex-1 h-1.5 rounded-full overflow-hidden bg-white/20 transition-all hover:h-2"
+                        className="flex-1 h-1.5 rounded-full overflow-hidden bg-slate-200 dark:bg-white/20 transition-all hover:h-2"
                         title={`Jump to ${photo.title}`}
                         aria-label={`Go to slide ${i + 1}`}
                       >
@@ -257,11 +256,11 @@ export function About() {
 
                   {/* Auto-scroll & Click Prompt Pill */}
                   <div className="flex items-center gap-2 pl-2">
-                    <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-white/10 text-white/80 border border-white/15">
-                      <span className={`w-1.5 h-1.5 rounded-full ${isPaused ? 'bg-amber-400' : 'bg-emerald-400 animate-pulse'}`} />
+                    <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-200/80 dark:bg-white/10 text-slate-700 dark:text-white/80 border border-slate-300 dark:border-white/15">
+                      <span className={`w-1.5 h-1.5 rounded-full ${isPaused ? 'bg-amber-400' : 'bg-emerald-500 dark:bg-emerald-400 animate-pulse'}`} />
                       {isPaused ? 'Paused' : 'Auto-playing'}
                     </span>
-                    <span className="px-2 py-0.5 rounded-full text-[11px] font-mono font-bold bg-amber-400 text-slate-950">
+                    <span className="px-2 py-0.5 rounded-full text-[11px] font-mono font-bold bg-amber-400 text-slate-950 border border-slate-950">
                       0{index + 1} / 0{journeyPhotos.length}
                     </span>
                   </div>
@@ -270,18 +269,18 @@ export function About() {
                 {/* THE PHOTO VIEWPORT (Auto-scrolls + Click anywhere on photo advances) */}
                 <div 
                   onClick={handlePhotoClick}
-                  className="relative w-full h-[360px] xs:h-[400px] sm:h-[460px] md:h-[500px] overflow-hidden bg-slate-900/90 flex items-center justify-center cursor-pointer select-none"
+                  className="relative w-full h-[360px] xs:h-[400px] sm:h-[460px] md:h-[500px] overflow-hidden bg-slate-100 dark:bg-slate-900/90 flex items-center justify-center cursor-pointer select-none transition-colors duration-300"
                   title="Click anywhere to see next photo"
                 >
-                  {/* Layer 1: Ambient Blurred Backdrop (Ensures color harmony for any aspect ratio) */}
+                  {/* Layer 1: Ambient Blurred Backdrop */}
                   <img
                     src={journeyPhotos[index].src}
                     alt=""
                     aria-hidden="true"
-                    className="absolute inset-0 w-full h-full object-cover blur-3xl opacity-30 scale-125 pointer-events-none transition-opacity duration-700"
+                    className="absolute inset-0 w-full h-full object-cover blur-3xl opacity-20 dark:opacity-30 scale-125 pointer-events-none transition-opacity duration-700"
                   />
 
-                  {/* Layer 2: Foreground Image with object-contain (GUARANTEES NO CUTOFFS & FULL VISIBILITY) */}
+                  {/* Layer 2: Foreground Image with object-contain (100% COMPLETE VISIBILITY) */}
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={index}
@@ -294,7 +293,7 @@ export function About() {
                       <img
                         src={journeyPhotos[index].src}
                         alt={journeyPhotos[index].title}
-                        className={`max-w-full max-h-full object-contain object-center rounded-xl sm:rounded-2xl drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] border border-white/10 transition-transform duration-300 ${
+                        className={`max-w-full max-h-full object-contain object-center rounded-xl sm:rounded-2xl drop-shadow-[0_10px_20px_rgba(15,23,42,0.15)] dark:drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] border border-slate-300 dark:border-white/10 transition-transform duration-300 ${
                           clickAnim ? 'scale-95' : 'hover:scale-[1.01]'
                         }`}
                       />
@@ -303,15 +302,15 @@ export function About() {
 
                   {/* Hover Prompt Floating Tag */}
                   <div className="absolute top-4 right-4 z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-slate-950/80 text-white border border-white/20 shadow-xl backdrop-blur-md">
-                      Click image for next <ArrowRight className="w-3.5 h-3.5 text-amber-400" />
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/95 text-slate-900 border border-slate-300 shadow-xl dark:bg-slate-950/80 dark:text-white dark:border-white/20 backdrop-blur-md">
+                      Click image for next <ArrowRight className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
                     </span>
                   </div>
 
                   {/* Left / Right Chevron Controls */}
                   <button
                     onClick={(e) => { e.stopPropagation(); prev(); }}
-                    className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-950/80 hover:bg-amber-400 text-white hover:text-slate-950 border border-white/20 hover:border-slate-950 flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110 z-20 backdrop-blur-sm"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-amber-400 text-slate-900 hover:text-slate-950 border border-slate-300 hover:border-slate-950 dark:bg-slate-950/80 dark:hover:bg-amber-400 dark:text-white dark:hover:text-slate-950 dark:border-white/20 flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110 z-20 backdrop-blur-sm"
                     aria-label="Previous photo"
                   >
                     <ChevronLeft className="w-5 h-5" />
@@ -319,29 +318,29 @@ export function About() {
 
                   <button
                     onClick={(e) => { e.stopPropagation(); next(); }}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-950/80 hover:bg-amber-400 text-white hover:text-slate-950 border border-white/20 hover:border-slate-950 flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110 z-20 backdrop-blur-sm"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-amber-400 text-slate-900 hover:text-slate-950 border border-slate-300 hover:border-slate-950 dark:bg-slate-950/80 dark:hover:bg-amber-400 dark:text-white dark:hover:text-slate-950 dark:border-white/20 flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110 z-20 backdrop-blur-sm"
                     aria-label="Next photo"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>
                 </div>
 
-                {/* Bottom Story Caption & Quick Thumbnail Strip */}
-                <div className="p-4 sm:p-5 bg-gradient-to-t from-slate-950 via-slate-950/95 to-slate-950/80 border-t border-white/10 relative z-20">
+                {/* Bottom Story Caption & Quick Thumbnail Strip (Adaptive Light & Dark Mode) */}
+                <div className="p-4 sm:p-5 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-white/10 relative z-20 transition-colors duration-300">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                    <div className="space-y-1">
+                    <div className="space-y-1 text-left">
                       <div className="flex items-center gap-2">
                         <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black tracking-wider uppercase border border-slate-950 ${journeyPhotos[index].tagColor}`}>
                           {journeyPhotos[index].tag}
                         </span>
-                        <span className="text-xs font-semibold text-white/50">
+                        <span className="text-xs font-semibold text-slate-500 dark:text-white/50">
                           {index === 0 ? "National Stage" : index === 1 ? "Grand Finale" : "Academic Roots"}
                         </span>
                       </div>
-                      <h4 className="text-base sm:text-lg font-black text-white leading-tight">
+                      <h4 className="text-base sm:text-lg font-black text-slate-950 dark:text-white leading-tight">
                         {journeyPhotos[index].title}
                       </h4>
-                      <p className="text-xs sm:text-sm text-slate-400 leading-normal">
+                      <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-normal">
                         {journeyPhotos[index].subtitle}
                       </p>
                     </div>
@@ -354,8 +353,8 @@ export function About() {
                           onClick={(e) => { e.stopPropagation(); setIndex(i); }}
                           className={`relative w-12 h-12 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
                             i === index 
-                              ? 'border-amber-400 scale-105 shadow-[0_0_12px_rgba(251,191,36,0.5)]' 
-                              : 'border-white/20 opacity-50 hover:opacity-100'
+                              ? 'border-amber-400 scale-105 shadow-[0_0_12px_rgba(251,191,36,0.6)]' 
+                              : 'border-slate-300 dark:border-white/20 opacity-60 hover:opacity-100'
                           }`}
                           title={photo.title}
                           aria-label={`Switch to photo ${i + 1}`}

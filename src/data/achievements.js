@@ -4,32 +4,32 @@ export const achievements = [
   {
     id: "sih-2025",
     title: "Smart India Hackathon 2025",
-    subtitle: "National Winner",
-    description: "Won nationally among 10,000+ teams for an AI-based farming assistant for Kerala farmers.",
+    subtitle: "National Winner · Rank 1 / 10,000+",
+    description: "Ranked 1st among 10,000+ teams nationally for architecting an AI-powered agricultural advisory platform for Kerala farmers.",
     icon: BiTrophy,
     accent: "yellow"
   },
   {
     id: "leetcode-knight",
     title: "LeetCode Knight",
-    subtitle: "Rating 1833 (Max 1880)",
-    description: "782+ problems solved, top 5.5% globally. Active contest participant.",
+    subtitle: "Rating: 1889 · Top 4.7% Globally",
+    description: "Solved 900+ Data Structures & Algorithms problems; achieved a peak contest rating of 1889.",
     icon: BiCodeAlt,
     accent: "purple"
   },
   {
-    id: "codechef",
-    title: "CodeChef",
-    subtitle: "Max Rating 1596",
-    description: "Strong algorithmic thinking and consistent contest performances.",
+    id: "competitive-programming",
+    title: "Competitive Programming",
+    subtitle: "Peak 1603 (CodeChef) · 50+ Contests",
+    description: "Reached peak rating of 1603 on CodeChef; actively competed in 50+ live contests across LeetCode, CodeChef, and Codeforces.",
     icon: BiStar,
     accent: "blue"
   },
   {
-    id: "cp-contests",
-    title: "Competitive Programming",
-    subtitle: "47+ Contests",
-    description: "Participated across weekly/bi-weekly LeetCode, CodeChef, and Codeforces contests.",
+    id: "hackathons-academics",
+    title: "Hackathons & Academics",
+    subtitle: "IIT Roorkee, Amazon ML, Adobe",
+    description: "Finalist at INSOMNIA'26 (IIT Roorkee), Amazon ML School 2025–26, Adobe India Hackathon; qualified JEE Main & Advanced 2023.",
     icon: BiCalendarEvent,
     accent: "teal"
   }
@@ -39,11 +39,12 @@ export const education = {
   degree: "B.Tech — Information Technology",
   duration: "2023–2027",
   institution: "Bundelkhand Institute of Engineering and Technology, Jhansi",
-  performance: "CGPA: 8.46/10"
+  performance: "CGPA: 8.46 / 10"
 };
 
 export const extraAchievements = [
-  "Selected participant at INSOMNIA'26 (IIT Roorkee)",
-  "Amazon ML School Participant (2025–26)",
-  "Adobe India Hackathon Participant"
+  "INSOMNIA'26 (IIT Roorkee) — Finalist / Participant",
+  "Amazon ML School 2025–26 — Selected Participant",
+  "Adobe India Hackathon 2025–26 — Participant",
+  "JEE Main & Advanced 2023 — Qualified among 1M+ Candidates"
 ];
