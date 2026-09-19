@@ -8,7 +8,7 @@ import { heroStats } from '../../data/stats';
 import profilePic  from '../../assets/picofme.png'; // adjust path as per your assets folder
 import { FaGithub, FaLinkedin, FaEnvelope, FaFilePdf, FaMapMarkerAlt } from 'react-icons/fa';
 import { SiReact, SiNextdotjs, SiNodedotjs } from 'react-icons/si';
-import { Sparkles, Brain, Bot } from 'lucide-react';
+import { Brain, Bot } from 'lucide-react';
 
 export function Hero() {
   // const [active isActive] = useState(false);
@@ -172,108 +172,95 @@ export function Hero() {
           {/* Code Editor Mockup (Right) */}
           {/* Profile Picture (Right) */}
 {/* Profile Picture (Right) */}
-      {/* Profile Picture & Floating Tech Badges (Right) */}
-      <div className="lg:col-span-5 relative flex items-center justify-center mt-8 lg:mt-0 py-8">
+      <div className="lg:col-span-5 relative flex items-center justify-center">
+  <motion.div
+    variants={itemVariants}
+    className="relative z-10"
+    animate={{ y: [0, -10, 0] }}
+    transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+  >
+    <div className="group relative w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] rounded-full border-4 border-slate-950 shadow-[6px_6px_0px_rgba(15,23,42,1)] overflow-hidden bg-white dark:bg-slate-900 cursor-pointer">
+      
+      {/* Profile Image */}
+      <img
+        src={profilePic}
+        alt="Nilesh Kumar"
+        className="w-full h-full object-cover grayscale-0 group-hover:grayscale group-active:grayscale transition-all duration-700 ease-in-out"
+      />
+
+      {/* Animated shimmer/scan overlay - shows on hover/touch */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 pointer-events-none">
         <motion.div
-          variants={itemVariants}
-          className="relative z-10"
-          animate={{ y: [0, -10, 0] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        >
-          <div className="group relative w-[250px] h-[250px] xs:w-[280px] xs:h-[280px] sm:w-[320px] sm:h-[320px] md:w-[340px] md:h-[340px] rounded-full border-4 border-slate-950 shadow-[6px_6px_0px_rgba(15,23,42,1)] overflow-hidden bg-white dark:bg-slate-900 cursor-pointer">
-            
-            {/* Profile Image */}
-            <img
-              src={profilePic}
-              alt="Nilesh Kumar"
-              className="w-full h-full object-cover grayscale-0 group-hover:grayscale group-active:grayscale transition-all duration-700 ease-in-out"
-            />
+          className="absolute inset-0 bg-gradient-to-b from-transparent via-white/25 to-transparent"
+          animate={{ y: ["-100%", "200%"] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+        />
+      </div>
 
-            {/* Animated shimmer/scan overlay - shows on hover/touch */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 pointer-events-none">
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-b from-transparent via-white/25 to-transparent"
-                animate={{ y: ["-100%", "200%"] }}
-                transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
-              />
-            </div>
+      {/* Subtle ring pulse on hover */}
+      <div className="absolute inset-0 rounded-full ring-0 group-hover:ring-4 group-active:ring-4 ring-accent-blue/40 transition-all duration-500 pointer-events-none" />
+    </div>
+  </motion.div>
 
-            {/* Subtle ring pulse on hover */}
-            <div className="absolute inset-0 rounded-full ring-0 group-hover:ring-4 group-active:ring-4 ring-accent-blue/40 transition-all duration-500 pointer-events-none" />
-          </div>
-        </motion.div>
+  {/* 1. Next.js (Top-Right) */}
+  <motion.div
+    className="absolute top-4 right-0 sm:right-4 z-20"
+    animate={{ y: [0, -12, 0], x: [0, 4, 0] }}
+    transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+  >
+    <Badge variant="primary" className="bg-white border-slate-200 text-slate-750 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-300 shadow-xl px-3.5 py-1.5 font-bold hover:scale-110 transition-transform flex items-center gap-1.5">
+      <SiNextdotjs className="w-3.5 h-3.5 text-slate-900 dark:text-white" />
+      Next.js
+    </Badge>
+  </motion.div>
 
-        {/* 1. Gemini AI (Top-Left) */}
-        <motion.div
-          className="absolute top-1 left-2 sm:top-2 sm:left-4 z-20"
-          animate={{ y: [0, -10, 0], x: [0, 4, 0] }}
-          transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-        >
-          <div className="bg-amber-400 border-2 border-slate-950 text-slate-950 shadow-[3px_3px_0px_rgba(15,23,42,1)] px-2.5 sm:px-3.5 py-1 sm:py-1.5 text-xs sm:text-sm font-black flex items-center gap-1.5 rounded-full hover:scale-110 transition-transform cursor-pointer">
-            <Sparkles className="w-3.5 h-3.5 fill-slate-950" />
-            <span>Gemini AI</span>
-          </div>
-        </motion.div>
+  {/* 2. Node.js (Mid-Right) */}
+  <motion.div
+    className="absolute bottom-1/3 right-0 z-20"
+    animate={{ y: [0, -10, 0] }}
+    transition={{ repeat: Infinity, duration: 4.5, delay: 0.5, ease: "easeInOut" }}
+  >
+    <Badge variant="primary" className="bg-white border-slate-200 text-slate-750 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-300 shadow-xl px-3.5 py-1.5 font-bold hover:scale-110 transition-transform flex items-center gap-1.5">
+      <SiNodedotjs className="w-3.5 h-3.5 text-emerald-500" />
+      Node.js
+    </Badge>
+  </motion.div>
 
-        {/* 2. Next.js (Top-Right) */}
-        <motion.div
-          className="absolute top-1 right-2 sm:top-2 sm:right-4 z-20"
-          animate={{ y: [0, -12, 0], x: [0, -5, 0] }}
-          transition={{ repeat: Infinity, duration: 5.6, delay: 0.6, ease: "easeInOut" }}
-        >
-          <div className="bg-white dark:bg-slate-900 border-2 border-slate-950 dark:border-slate-700 text-slate-900 dark:text-white shadow-[3px_3px_0px_rgba(15,23,42,1)] dark:shadow-[3px_3px_0px_rgba(0,0,0,0.6)] px-2.5 sm:px-3.5 py-1 sm:py-1.5 text-xs sm:text-sm font-black flex items-center gap-1.5 rounded-full hover:scale-110 transition-transform cursor-pointer">
-            <SiNextdotjs className="w-3.5 h-3.5 text-slate-950 dark:text-white" />
-            <span>Next.js</span>
-          </div>
-        </motion.div>
+  {/* 3. RAG (Bottom-Right) */}
+  <motion.div
+    className="absolute bottom-4 right-0 sm:right-4 z-20"
+    animate={{ y: [0, 10, 0], x: [0, -4, 0] }}
+    transition={{ repeat: Infinity, duration: 5.2, delay: 0.8, ease: "easeInOut" }}
+  >
+    <Badge variant="accent" className="shadow-xl px-3.5 py-1.5 font-bold hover:scale-110 transition-transform flex items-center gap-1.5">
+      <Brain className="w-3.5 h-3.5 text-slate-950" />
+      RAG
+    </Badge>
+  </motion.div>
 
-        {/* 3. Node.js (Mid-Right) */}
-        <motion.div
-          className="absolute top-1/2 -translate-y-1/2 -right-2 sm:-right-6 z-20"
-          animate={{ y: [0, 8, 0], x: [0, 5, 0] }}
-          transition={{ repeat: Infinity, duration: 4.8, delay: 1.2, ease: "easeInOut" }}
-        >
-          <div className="bg-white dark:bg-slate-900 border-2 border-slate-950 dark:border-slate-700 text-slate-900 dark:text-white shadow-[3px_3px_0px_rgba(15,23,42,1)] dark:shadow-[3px_3px_0px_rgba(0,0,0,0.6)] px-2.5 sm:px-3.5 py-1 sm:py-1.5 text-xs sm:text-sm font-black flex items-center gap-1.5 rounded-full hover:scale-110 transition-transform cursor-pointer">
-            <SiNodedotjs className="w-3.5 h-3.5 text-emerald-500" />
-            <span>Node.js</span>
-          </div>
-        </motion.div>
+  {/* 4. React.js (Bottom-Left) */}
+  <motion.div
+    className="absolute bottom-4 left-0 sm:left-4 z-20"
+    animate={{ y: [0, 12, 0], x: [0, -4, 0] }}
+    transition={{ repeat: Infinity, duration: 5, delay: 1, ease: "easeInOut" }}
+  >
+    <Badge variant="primary" className="bg-white border-slate-200 text-slate-750 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-300 shadow-xl px-3.5 py-1.5 font-bold hover:scale-110 transition-transform flex items-center gap-1.5">
+      <SiReact className="w-3.5 h-3.5 text-sky-400" />
+      React.js
+    </Badge>
+  </motion.div>
 
-        {/* 4. RAG (Bottom-Right) */}
-        <motion.div
-          className="absolute bottom-1 right-2 sm:bottom-2 sm:right-4 z-20"
-          animate={{ y: [0, 10, 0], x: [0, -4, 0] }}
-          transition={{ repeat: Infinity, duration: 5.2, delay: 0.4, ease: "easeInOut" }}
-        >
-          <div className="bg-gradient-to-r from-purple-600 to-indigo-600 border-2 border-slate-950 text-white shadow-[3px_3px_0px_rgba(15,23,42,1)] px-2.5 sm:px-3.5 py-1 sm:py-1.5 text-xs sm:text-sm font-black flex items-center gap-1.5 rounded-full hover:scale-110 transition-transform cursor-pointer">
-            <Brain className="w-3.5 h-3.5 text-yellow-300" />
-            <span>RAG</span>
-          </div>
-        </motion.div>
-
-        {/* 5. React.js (Bottom-Left) */}
-        <motion.div
-          className="absolute bottom-1 left-2 sm:bottom-2 sm:left-4 z-20"
-          animate={{ y: [0, 12, 0], x: [0, 5, 0] }}
-          transition={{ repeat: Infinity, duration: 6, delay: 1.6, ease: "easeInOut" }}
-        >
-          <div className="bg-white dark:bg-slate-900 border-2 border-slate-950 dark:border-slate-700 text-slate-900 dark:text-white shadow-[3px_3px_0px_rgba(15,23,42,1)] dark:shadow-[3px_3px_0px_rgba(0,0,0,0.6)] px-2.5 sm:px-3.5 py-1 sm:py-1.5 text-xs sm:text-sm font-black flex items-center gap-1.5 rounded-full hover:scale-110 transition-transform cursor-pointer">
-            <SiReact className="w-3.5 h-3.5 text-sky-400" />
-            <span>React.js</span>
-          </div>
-        </motion.div>
-
-        {/* 6. LLMs (Mid-Left) */}
-        <motion.div
-          className="absolute top-1/2 -translate-y-1/2 -left-2 sm:-left-6 z-20"
-          animate={{ y: [0, -8, 0], x: [0, -5, 0] }}
-          transition={{ repeat: Infinity, duration: 4.5, delay: 1, ease: "easeInOut" }}
-        >
-          <div className="bg-white dark:bg-slate-900 border-2 border-slate-950 dark:border-slate-700 text-slate-900 dark:text-white shadow-[3px_3px_0px_rgba(15,23,42,1)] dark:shadow-[3px_3px_0px_rgba(0,0,0,0.6)] px-2.5 sm:px-3.5 py-1 sm:py-1.5 text-xs sm:text-sm font-black flex items-center gap-1.5 rounded-full hover:scale-110 transition-transform cursor-pointer">
-            <Bot className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400" />
-            <span>LLMs</span>
-          </div>
-        </motion.div>
+  {/* 5. LLMs (Mid-Left) */}
+  <motion.div
+    className="absolute top-1/3 left-0 z-20"
+    animate={{ y: [0, 10, 0] }}
+    transition={{ repeat: Infinity, duration: 5.5, delay: 1.5, ease: "easeInOut" }}
+  >
+    <Badge variant="primary" className="bg-white border-slate-200 text-slate-750 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-300 shadow-xl px-3.5 py-1.5 font-bold hover:scale-110 transition-transform flex items-center gap-1.5">
+      <Bot className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400" />
+      LLMs
+    </Badge>
+  </motion.div>
       </div>
         </motion.div>
       </div>
