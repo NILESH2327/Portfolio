@@ -2,6 +2,7 @@ import medixthonImg from '../../src/assets/Medixthon.png';
 import aiSaasChatbotImg from '../../src/assets/support.png';
 import krishiSakhiImg from '../../src/assets/krishi.png';
 import talkieImg from '../../src/assets/login.png';
+import leadms from '../../src/assets/leadms.png';
 
 
 export const projects = [
@@ -27,7 +28,7 @@ export const projects = [
     ],
     links: {
       github: "https://github.com/NILESH2327/Medixthon",
-      live: ""
+      live: "https://ai-medixthon.vercel.app/"
     }
   },
   {
@@ -78,6 +79,31 @@ export const projects = [
     links: {
       github: "https://github.com/NILESH2327/Diployfor74/tree/main",
       live: "https://hilarious-haupia-22b309.netlify.app/" 
+    }
+  },
+  {
+    id: "leadms",
+    title: "LeadMS",
+    subtitle: "B2B Lead Management & Quoting CRM",
+    date: "2026",
+    featured: true,
+    tag: "B2B CRM",
+    image: leadms,
+    problem: "Multi-tier B2B teams lacked automated product pricing, quoting, and lead delegation",
+    impact: "3-tier RBAC, automated quoting & single-session security",
+    description: "A B2B CRM and lead management platform orchestrating product catalogs, dynamic margin quoting, and lead delegation across Traders, Vendors, and Sales Teams.",
+    checklist: [
+      "Multi-tier RBAC: Traders (catalog), Vendors (custom margins), & Team Members",
+      "Dynamic quote calculations with vendor margins & installation fees",
+      "Single-device session locking via activeRefreshToken with JWT security",
+      "Email verification & team invitation workflows with Nodemailer"
+    ],
+    stack: [
+      "React", "Node.js", "Express.js", "MongoDB", "JWT", "REST API", "Nodemailer", "Tailwind CSS"
+    ],
+    links: {
+      github: "https://github.com/NILESH2327/assignment-backend",
+      live: "https://assignment-frontend-mauve-beta.vercel.app/"
     }
   },
   {
